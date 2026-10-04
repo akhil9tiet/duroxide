@@ -3391,7 +3391,7 @@ impl OrchestrationContext {
     }
 
     /// Clear all keys from the KV store.
-    ///mut 
+    /// 
     /// Emits a `KeyValuesCleared` history event. After this call,
     /// `get_kv_value(key)` returns `None` for all keys.
     pub fn clear_all_kv_values(&self) {
