@@ -3414,7 +3414,7 @@ impl OrchestrationContext {
     /// order differs between runs, and replay compares actions against recorded
     /// events in order (fixes microsoft/duroxide#57).
     pub fn prune_kv_values_updated_before(&self, updated_before_ms: u64) -> usize {
-        let mut  keys_to_clear: Vec<String> = {
+        let mut keys_to_clear: Vec<String> = {
             let inner = self.inner.lock().unwrap();
             inner
                 .kv_metadata
